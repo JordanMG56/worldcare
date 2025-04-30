@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2434c6, #121212); /* Default Gradient */
+    color: #ffffff; /* Light text for contrast */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent scrolling */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Main Motivation Screen */
+.motivation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.quote-box {
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.quote-box.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.quote {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.author {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Side Tab Menu */
+.side-tab {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-tab button {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.side-tab button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.side-tab svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+/* Bottom Right Tab */
+.bottom-right-tab {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.bottom-right-tab button {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bottom-right-tab button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bottom-right-tab svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+/* Drawer Styles */
+.drawer {
+    position: fixed;
+    bottom: -100%; /* Fully hidden by default */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    text-align: center;
+    transition: bottom 0.4s ease;
+}
+
+.drawer.active {
+    bottom: 0; /* Slides into the viewport */
+}
+
+.hidden {
+    display: none; /* Ensures fully hidden elements */
+}
+
+.drawer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.drawer-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.drawer-options button {
+    background: #2434c6;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.drawer-options button:hover {
+    background: #4caf50;
+}
+
+.close-drawer-btn {
+    margin-top: 20px;
+    background: #ff4c4c;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.close-drawer-btn:hover {
+    background: #ff6666;
+}
